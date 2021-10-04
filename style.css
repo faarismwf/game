@@ -1,0 +1,154 @@
+body {
+	margin: auto;
+	background-image: url(https://images.unsplash.com/photo-1626544827763-d516dce335e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=967&q=80);
+	background-size: cover;
+}
+	}
+	.menu p {
+		padding: 1px;
+		margin: 1px;
+	}
+	.tmenu {
+		width: 45px;
+		height: 45px;
+		border-radius: 12px;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+		background-color: white;
+		border: none;
+		transition: 0.25s;
+		background-color: #783DF8;
+		color: white;
+	}
+	.tmenu:hover {
+		box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+		transform: translateY(-5px);
+		transition: 0.25s;
+		color: #DBD3FF;
+	}
+	.icon {
+		text-align: center;
+	}
+	.panel {
+		background-color: rgba(255, 255, 255, 0.5);
+		backdrop-filter: blur(20px);
+		border-radius: 25px;
+		margin-top: -10px;
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	.panel h1 {
+		background: -webkit-linear-gradient(#BD3C7E, #156FF0, #BD3C7E);
+		  -webkit-background-clip: text;
+		  -webkit-text-fill-color: transparent;
+		font-size: 55px;
+	}
+	.foto img {
+		width: 160px;
+		border: 6px solid #ccc;
+		text-align: center;
+	}
+	.foto p {
+		text-align: center;
+	}
+/*footer*/
+footer {
+	background-color: #3f3f3f;
+	margin-top: 0;
+}
+
+
+/*Utility*/
+	.tombol {
+		border-radius: 25px;
+		border: none;
+	}
+	.slider {
+	  width: 100%;
+	  text-align: center;
+	  overflow: hidden;
+	  margin: 30px 0;
+	}
+	.slides {
+	  display: flex;
+	  overflow-x: auto;
+	  scroll-snap-type: x mandatory;
+	  scroll-behavior: smooth;
+	  -webkit-overflow-scrolling: touch;
+	}
+	.slides::-webkit-scrollbar { width: 10px; height: 10px; }
+	.slides::-webkit-scrollbar-thumb { background: #ccc; border-radius: 12px; }
+	.slides::-webkit-scrollbar-track { background: transparent; }
+	.slides > div {
+	  scroll-snap-align: start;
+	  flex-shrink: 0;
+	  width: 220px;
+	  margin: 0 10px 0 10px;
+	  transform-origin: center center;
+	  transform: scale(1);
+	  transition: transform 0.5s;
+	  position: relative;
+	  justify-content: center;
+	  align-items: center;
+	  overflow: hidden;
+	  font-size: 100%;
+	}
+	.slides img {
+		margin-right: 10px;
+	}
+	.bg-loader {
+		background-color: rgba(255, 255, 255, 0.5);
+		backdrop-filter: blur(15px);
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 9999;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.bg-loader p {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 9999;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: #0E89A2;
+	}
+	.bg-loader .loader {
+		width: 120px;
+		height: 120px;
+		border: 4px solid rgba(255, 255, 255, 0);
+		border-radius: 50%;
+		border-top-color: #0E89A2;
+		border-bottom-color: #0E89A2;
+		animation: muter .8s linear infinite;
+	} 
+	@keyframes muter {
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+/*akhir utility*/
+
+
+/*Mobile*/
+	@media screen and (max-width: 768px) {
+		.container {
+			width: 85%;
+		}
+		.content .container{
+			width: 92%;
+		}
+		.icon p {
+			font-size: 15px;
+			color: #303030;
+			font-weight: 200;
+		}
+	}
+/*akhir mobile
