@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Bing Chiling Card</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Permanent+Marker" >
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <style type="text/css">
+        .card img{
+            width: 3.5rem;
+            visibility: hidden;
+            border-radius: 5px;
+        }
+        
+        /*iphone X series SE & HP kentang*/
+        @media screen and (max-width: 375px) {
+            .deck {
+                width: 100%;
+            }
+
+            .deck .card {
+                height: 3.9rem;
+                width: 3.9rem;
+            }
+        }
+
+
+        /*HP Biasa*/
+        @media screen and (min-width: 375px) {
+            .deck {
+                width: 100%;
+            }
+
+            .deck .card {
+                height: 4.2rem;
+                width: 4.2rem;
+            }
+        }
+
+
+        /*HP Gahar*/
+        @media screen and (min-width: 388px) {
+            .deck {
+                width: 100%;
+            }
+
+            .deck .card {
+                height: 4.4rem;
+                width: 4.4rem;
+            }
+        }
+
+
+        @media screen and (max-width: 768px){
+            .bawah {
+                margin-top: -60px;
+            }
+        }
+
+
+        /*Tablet / laptop*/
+        @media screen and (min-width: 768px) {
+            .container {
+                font-size: 22px;
+            }
+
+            .deck {
+                width: 550px;
+                height: 550px;
+            }
+
+            .deck .card {
+                height: 120px;
+                width: 120px;
+            }
+
+            .popup {
+                width: 60%;
+            }
+            .card img{
+                width: 110px;
+                visibility: hidden;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- loader -->
+    <div class="bg-loader">
+        <div class="kotak">
+            <div class="loader"></div>
+            <p>sabar..</p>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Cara Main</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <table class="table">
+              <tbody>
+                <p>Pilih <strong>salah satu kartu</strong>, lalu <strong>pilih kartu lainnya</strong>, kemudian <strong>samakan</strong>. Download E-Certificate jika sudah tamat!</p>
+                <tr>
+                  <th scope="row">1</th>
+                  <td colspan="2"><strong>Kartu Terbuka</strong></td>
+                  <td><img src="aset/C4.png" alt="" style="width: 60px; border-radius: 10px; background-color: #3498DB;"></td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td><strong>Salah</strong></td>
+                  <td><img src="aset/C4.png" alt="" style="width: 60px; border-radius: 10px; background-color: #e2043b;"></td>
+                  <td><img src="aset/C2.png" alt="" style="width: 60px; border-radius: 10px; background-color: #e2043b;"></td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td><strong>Benar</strong></td>
+                  <td><img src="aset/C2.png" alt="" style="width: 60px; border-radius: 10px; background-color: #16A085;"></td>
+                  <td><img src="aset/C2.png" alt="" style="width: 60px; border-radius: 10px; background-color: #16A085;"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <button type="button" style="border-radius: 10px; width:50%; margin: auto; margin-bottom: 10px;" class="btn btn-success" data-bs-dismiss="modal" aria-label="Close">Ok</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+        <section class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 score-panel text-center pt-4">
+                        <div class="deck">
+                            <div class="row">
+                                <ul class="level">
+                                    <li style="margin-right: 5px;"><strong>Level:</strong></li>
+                                    <li class="active">1</li>
+                                    <li>2</li>
+                                    <span class="launch" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Cara main</span>
+                                </ul>
+                                <ul class="stars">
+                                    <li><i class="fa fa-star spin"></i></li>
+                                    <li><i class="fa fa-star spin"></i></li>
+                                    <li><i class="fa fa-star spin"></i></li>
+                                </ul>
+                            </div>
+                            <div class="boss mt-2">
+                                <img src="aset/Chnb1.png" alt="" onclick="bingchiling()">
+                            </div>
+                            <div class="panel">
+                                <span class="moves">0</span> Move(s)
+                                <div class="timer"></div>
+                                <div class="restart" onclick=startGame()>
+                                    <i class="fa fa-repeat"></i> ulang
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 pt-4">
+                        <ul class="deck bawah" id="card-deck">
+                            <li class="card" type="1">
+                                <img src="aset/C1.png" alt="">
+                            </li>
+                            <li class="card" type="1">
+                                <img src="aset/C1.png" alt="">
+                            </li>
+                            <li class="card" type="2">
+                                <img src="aset/C2.png" alt="">
+                            </li>
+                            <li class="card" type="2">
+                                <img src="aset/C2.png" alt="">
+                            </li>
+                            <li class="card match" type="3">
+                                <img src="aset/C3.png" alt="">
+                            </li>
+                            <li class="card match" type="3">
+                                <img src="aset/C3.png" alt="">
+                            </li>
+                            <li class="card open show" type="4">
+                                <img src="aset/C4.png" alt="">
+                            </li>
+                            <li class="card" type="4" onclick="bingchiling()">
+                                <img src="aset/C4.png" alt="">
+                            </li>
+                            <li class="card" type="1">
+                                <img src="aset/C1.png" alt="">
+                            </li>
+                            <li class="card" type="1">
+                                <img src="aset/C1.png" alt="">
+                            </li>
+                            <li class="card" type="2">
+                                <img src="aset/C2.png" alt="">
+                            </li>
+                            <li class="card" type="2">
+                                <img src="aset/C2.png" alt="">
+                            </li>
+                            <li class="card match" type="3">
+                                <img src="aset/C3.png" alt="">
+                            </li>
+                            <li class="card match" type="3">
+                                <img src="aset/C3.png" alt="">
+                            </li>
+                            <li class="card open show" type="4">
+                                <img src="aset/C4.png" alt="">
+                            </li>
+                            <li class="card" type="4" onclick="bingchiling()">
+                                <img src="aset/C4.png" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="popup1" class="overlay">
+            <div class="popup">
+                <button class="btn"> <a class="close" href=# ><i class="fa fa-times-circle" aria-hidden="true"></i></a> </button>
+                <div class="content-2">
+                    <table class="table">
+                      <tbody>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td><p>Gerak: </p></td>
+                          <td><span id=finalMove> </span>kali</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          <td>Waktu: </td>
+                          <td><span id=totalTime> </span></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">3</th>
+                          <td> Rating: </td>
+                          <td><span id=starRating> </span></td>
+                        </tr>
+                        <tr class="text-center">
+                          <td><img src="aset/C5.png" alt="" style="width: 50px; border-radius: 10px;"></td>
+                          <td><img src="aset/C6.gif" alt="" style="width: 50px; border-radius: 10px;"></td>
+                          <td><img src="aset/C7.gif" alt="" style="width: 50px; border-radius: 10px;"></td>
+                          <td><img src="aset/C8.png" alt="" style="width: 50px; border-radius: 10px;"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="text-center">
+                        <p>New Character <strong>Unlocked</strong>!</p>
+                    </div>
+                </div>
+                <button class="btn tombol" id="play-again"onclick="playAgain()">
+                    <small>Main Lagi</small> <i class="fa fa-repeat"></i>
+                </button>
+                <a style="text-decoration: none !important;" href="lv2.html"><button class="btn tombol mt-3"><small>Lanjut Level 2 </small><i class="fa fa-arrow-right" aria-hidden="true"></i></button></a>
+            </div>
+        </div>
+
+    </div>
+    <audio src="aset/Pop.mp3" id="pop"></audio>
+    <audio src="aset/gong.mp3" id="gong"></audio>
+    <audio src="aset/bc.mp3" id="bc"></audio>
+    <script>
+        function bingchiling(){
+            bc.play();
+        }
+    </script>
+    <!-- animasi -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
+    <script>
+        gsap.from('.col-md-6', {duration:1, y:'100%', opacity:0, delay:1, ease:'elastic'})
+    </script>
+    <!-- loader -->
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".bg-loader").hide();
+        })
+    </script>
+    <script src="script.js"></script>
+    <!-- akhir loader -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</body>
+</html>
