@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width-device-width, initial-scale=1.0">
+	<link rel="icon" href="img/tour.png">
+	<title>Enviro Play</title>
+	<link rel="icon" href="" type="image/x-icon">
+
+	<!-- bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+	<!-- font awesome -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<!-- animation AOS -->
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+	<!-- loading jquary -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+	<!-- google font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+	<!-- loader -->
+	<div class="bg-loader">
+		<div class="kotak">
+			<div class="loading">
+			  <span></span>
+			  <span></span>
+			  <span></span>
+			  <span></span>
+			  <span></span>
+			</div>
+			<p>sabar</p>
+		</div>
+	</div>
+
+	<!-- Navbar -->
+	<nav class="content navbar-dark shadow-lg fixed-bottom">
+		<div class="container">
+		    <ul class="nav">
+		      	<li class="nav-item">
+		          <a class="nav-link active" href="index.html"><i class="bi bi-house"></i> <small class="float-name">Dashboard</small></a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="game.html"><i class="bi bi-collection"></i> <small class="float-name">Game</small></a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="about.html"><i class="bi bi-info-square"></i> <small class="float-name">About</small></a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="more.html"><i class="bi bi-compass"></i> <small class="float-name"> More</small></a>
+		        </li>
+		      </ul>
+		</div>
+	</nav>
+	<!-- akhir navbar -->
+
+	<!-- loader -->
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".bg-loader").hide();
+		})
+	</script>
+	<!-- akhir loader -->
+
+	<section class="content">
+		<div class="container">
+			<h1 class="display-6 mt-4 text-white"><i class="bi bi-house"></i> Dashboard</h1>
+			<div class="row justify-content-center">
+				<div class="col-md-6 banner mt-3">
+					<img src="img/bg.jpg" alt="">
+					<a href="game.html"><button class="play"><i class="bi bi-play-fill"></i> Play Now!</button></a>
+				</div>
+				<div class="col-md-6 container mt-3">
+					<div class="row menubar">
+					<h1 class="display-6 mt-4">Game Library</h1>
+						<div class="col-md col-4">
+							<div class="icon mt-2">
+								<a href="si-botack/index.html"><img class="tmenu" src="img/botak1.png" alt=""></a>
+								<small for="">SiBotack</small>
+							</div>
+						</div>
+						<div class="col-md col-4">
+							<div class="icon mt-2">
+								<a href="Bing-Chiling-game/index.html"><img class="tmenu" src="img/c4.png" alt=""></a>
+								<small for="">BingChiling</small>
+							</div>
+						</div>
+						<div class="col-md col-4">
+							<div class="icon mt-2">
+								<a href="miner/mine.html"><img class="tmenu" src="img/ia.jpg" alt=""></a>
+								<p>InoenAdv</p>
+							</div>
+						</div>
+						<div class="col-md col-4">
+							<div class="icon mt-2">
+								<a href="botack-army/army.html"><img class="tmenu" src="img/mm.jpg" alt=""></a>
+								<p>MinMilitia</p>
+							</div>
+						</div>
+						<div class="col-md col-4">
+							<div class="icon mt-2">
+								<a type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><img class="tmenu" src="img/tour.png" alt=""></a>
+								<p>Segera</p>
+							</div>
+						</div>
+						<div class="col-md col-4">
+							<div class="icon mt-2">
+								<a type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><img class="tmenu" src="img/tour.png" alt=""></a>
+								<p>Segera</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Modal -->
+	<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="staticBackdropLabel">Error !</h5>
+	        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+	      </div>
+	      <div class="modal-body">
+	        <p>Sabar dong !</p>
+	        <p>Bikin website dan bikin game itu nggak mudah</p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn tombol text-white" style="background-color:#54037a;" data-bs-dismiss="modal">Mengerti</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<!-- darkmode -->
+	<script>
+	 function setDarkMode(isDark) {
+	        var darkBtn = document.getElementById('darkBtn')
+	        var lightBtn = document.getElementById('lightBtn')
+
+	        if(isDark) {
+	            lightBtn.style.display = "block"
+	            darkBtn.style.display = "none"
+	        } else {
+	            lightBtn.style.display = "none"
+	            darkBtn.style.display = "block"
+	        }
+
+	        document.body.classList.toggle("darkmode");
+	    }
+	</script>
+	<!-- akhir darkmode -->
+
+	<!-- local storage -->
+	<script>
+		if(localStorage.getItem('preferredTheme') == 'dark') {
+		    setDarkMode(true)
+		}
+
+		function setDarkMode(isDark) {
+		    var darkBtn = document.getElementById('darkBtn')
+		    var lightBtn = document.getElementById('lightBtn')
+
+		    if(isDark) {
+		        lightBtn.style.display = "block"
+		        darkBtn.style.display = "none" 
+		    //tambahan localstorage
+		        localStorage.setItem('preferredTheme', 'dark');
+		    } else {
+		        lightBtn.style.display = "none"
+		        darkBtn.style.display = "block"
+		     //tambahan localstorage
+		        localStorage.removeItem('preferredTheme');
+		    }
+
+		    document.body.classList.toggle("darkmode");
+		}
+	</script>
+	<!-- akhir local storage -->
+
+	<!-- tilt effect -->
+	<script type="text/javascript" src="vanilla-tilt.min.js"></script>
+	<script type="text/javascript">
+		VanillaTilt.init(document.querySelectorAll(".banner"), {
+			max: 10,
+			speed: 600,
+			"max-glare": 1,
+		});
+	</script>
+	<!-- akhir tilt effect -->
+
+	<!-- animasi -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
+	<script>
+		gsap.from('.nav', {duration:1.5, y:'100%', opacity:0, ease:'expo'})
+		gsap.from('.nav-link', {duration:1, x:50, opacity:0, delay:0.75, ease:'elastic'})
+		gsap.from('.display-5', {duration:1, y:'-100%', opacity:0, ease:'ease'})
+		gsap.from('.banner', {duration:1, y:'-100%', opacity:0, delay:1.25, ease:'elastic'})
+		gsap.from('.menubar', {duration:1, y:'100%', opacity:0, delay:1.5, ease:'elastic'})
+		gsap.from('.icon', {duration:1, y:'100%', opacity:0, delay:1.75, ease:'elastic'})
+	</script>
+
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+		const card = document.querySelectorAll('.card')
+		card.forEach((img, i) =>{
+			img.dataset.aos = 'fade-up';
+			img.dataset.aosDelay = i*100;
+			img.dataset.aosOffset = 20;
+		});
+
+	    AOS.init({
+	    	once: true, 
+	    });
+	</script>
+	<!-- akhir animasi -->
+  
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>
