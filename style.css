@@ -14,16 +14,16 @@
 body{
 	font-family: 'Poppins', sans-serif;
 	margin: auto;
-	background-color: #05074C;
-	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23230661' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%23420476' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%2360038b' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%237f01a0' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%239D00B5' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
+	background-color: #470367;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Cg %3E%3Cpolygon fill='%23601dad' points='100 57.1 64 93.1 71.5 100.6 100 72.1'/%3E%3Cpolygon fill='%237230bf' points='100 57.1 100 72.1 128.6 100.6 136.1 93.1'/%3E%3Cpolygon fill='%23601dad' points='100 163.2 100 178.2 170.7 107.5 170.8 92.4'/%3E%3Cpolygon fill='%237230bf' points='100 163.2 29.2 92.5 29.2 107.5 100 178.2'/%3E%3Cpath fill='%238541D1' d='M100 21.8L29.2 92.5l70.7 70.7l70.7-70.7L100 21.8z M100 127.9L64.6 92.5L100 57.1l35.4 35.4L100 127.9z'/%3E%3Cpolygon fill='%230f289a' points='0 157.1 0 172.1 28.6 200.6 36.1 193.1'/%3E%3Cpolygon fill='%232933a8' points='70.7 200 70.8 192.4 63.2 200'/%3E%3Cpolygon fill='%233C3EB6' points='27.8 200 63.2 200 70.7 192.5 0 121.8 0 157.2 35.3 192.5'/%3E%3Cpolygon fill='%232933a8' points='200 157.1 164 193.1 171.5 200.6 200 172.1'/%3E%3Cpolygon fill='%230f289a' points='136.7 200 129.2 192.5 129.2 200'/%3E%3Cpolygon fill='%233C3EB6' points='172.1 200 164.6 192.5 200 157.1 200 157.2 200 121.8 200 121.8 129.2 192.5 136.7 200'/%3E%3Cpolygon fill='%230f289a' points='129.2 0 129.2 7.5 200 78.2 200 63.2 136.7 0'/%3E%3Cpolygon fill='%233C3EB6' points='200 27.8 200 27.9 172.1 0 136.7 0 200 63.2 200 63.2'/%3E%3Cpolygon fill='%232933a8' points='63.2 0 0 63.2 0 78.2 70.7 7.5 70.7 0'/%3E%3Cpolygon fill='%233C3EB6' points='0 63.2 63.2 0 27.8 0 0 27.8'/%3E%3C/g%3E%3C/svg%3E");
 	background-attachment: fixed;
-	background-size: cover;
 }
 
 /*Navbar*/
 	.nav {
-		background-color: rgba(255, 255, 255, 0.7);
+		background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.4));
 		backdrop-filter: blur(20px);
+		box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 		padding: 5px;
 		margin-bottom: 10px;
 		border-radius: 15px;
@@ -32,13 +32,13 @@ body{
 		border-radius: 10px;
 	}
 	.nav-link:hover{
-		background-color: #54037a;
+		background-color: #54037A ;
 		color: white;
 		border-radius: 10px;
 		animation: 0.5s;
 	}
 	.nav .active{
-		background-color: #54037a;
+		background-color: #54037A ;
 		color: white;
 		border-radius: 10px;
 	}
@@ -60,10 +60,12 @@ body{
 		margin-top: -50px;
 		margin-left: 40px;
 	}
-	.card, .modal-content{
-		background-color: rgba(255, 255, 255, 0.7);
-		backdrop-filter: blur(20px);
-		border-radius: 15px;
+	.card, .modal-content, .menubar{
+		background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.4));
+		border: 3px solid rgba(255, 255, 255, 0.1);
+		backdrop-filter: blur(15px);
+		border-radius: 20px;
+		box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 	}
 	.card img {
 		border-radius: 15px;
@@ -71,9 +73,7 @@ body{
 	}
 	.menubar {
 		text-align: center;
-		background-color: rgba(255, 255, 255, 0.7);
-		backdrop-filter: blur(20px);
-		border-radius: 15px;
+		margin-bottom: 75px;
 	}
 	.icon img {
 		width: 45px;
@@ -116,8 +116,9 @@ body{
 
 	form .form-control{
 		border-radius: 10px;
-		background-color: rgba(255, 255, 255, 0.7);
+		background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.4));
 		backdrop-filter: blur(20px);
+		border: 3px solid rgba(255, 255, 255, 0.1);
 	}
 	.darigoogle {
 		width: 100%;
